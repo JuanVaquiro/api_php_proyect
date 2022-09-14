@@ -1,0 +1,20 @@
+<?php
+$queryOro = "SELECT DISTINCT pn.cod AS COD, p.cant_piramide AS CANT_DEPORTISTAS, pn.nombre_piramide AS PIRAMIDE, d.nombres AS Oro, del.nombre as delacion_oro 
+FROM piramides_numero pn, piramides p, deportista d, delegaciones del, inscripcion i 
+where pn.cod_campeonato = 1 and p.cod_piramide = pn.cod and d.documento = pn.oro and i.delegacion = del.cod and i.doc_deportista = d.documento 
+order by pn.nombre_piramide asc";
+
+$queryPlata = "SELECT DISTINCT pn.nombre_piramide AS PIRAMIDE, d.nombres AS Plata, del.nombre as delacion_plata 
+FROM piramides_numero pn, piramides p, deportista d, delegaciones del, inscripcion i 
+where pn.cod_campeonato = 1 and p.cod_piramide = pn.cod and d.documento = pn.plata and i.delegacion = del.cod and i.doc_deportista = d.documento 
+order by pn.nombre_piramide asc";
+
+$queryBronce1 = "SELECT DISTINCT pn.nombre_piramide AS PIRAMIDE, d.nombres AS Bronce1, del.nombre as delacion_bronce1 
+FROM piramides_numero pn, piramides p, deportista d, delegaciones del, inscripcion i 
+where pn.cod_campeonato = 1 and p.cod_piramide = pn.cod and d.documento = pn.bronce1 and i.delegacion = del.cod and i.doc_deportista = d.documento 
+order by pn.nombre_piramide asc";
+
+$queryBronce2 = "SELECT DISTINCT pn.nombre_piramide AS PIRAMIDE, d.nombres AS Bronce2, del.nombre as delacion_bronce2 
+FROM piramides_numero pn, piramides p, deportista d, delegaciones del, inscripcion i 
+where pn.cod_campeonato = 1 and p.cod_piramide = pn.cod and d.documento = pn.bronce2 and i.delegacion = del.cod and i.doc_deportista = d.documento 
+order by pn.nombre_piramide asc";
